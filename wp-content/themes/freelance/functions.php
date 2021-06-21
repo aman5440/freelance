@@ -28,7 +28,12 @@ function load_css() {
 
 
 }
-add_action('wp_enqueue_scripts','load_css')
+add_action('wp_enqueue_scripts','load_css');
 
+function freelance_init()
+{
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+}
 
+add_action('after_setup_theme','freelance_init');
 ?>
