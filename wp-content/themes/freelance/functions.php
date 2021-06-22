@@ -36,4 +36,44 @@ function freelance_init()
 }
 
 add_action('after_setup_theme','freelance_init');
+
+
+
+class CreatePostType
+{
+    function __construct(public $name, $params){
+        register_post_type($name, $params);
+    }
+}
+
+/**
+ * Creating New POst
+ */
+function freelance_post_types()
+{
+    new CreatePostType('portfolios',[
+        'public'=>true,
+        'show_in_rest' =>  true,
+        'labels'=>[
+            'name'=>'Portfolios',
+            'add_new_item'=>'Add New Portfolio',
+            'edit_item'=>'Edit Portfolio',
+            'all_items'=>'All Portfolios'
+        ]
+    ]);
+
+    new CreatePostType('skills',[
+        'public'=>true,
+        'show_in_rest' =>  true,
+        'labels'=>[
+            'name'=>'Skills',
+            'add_new_item'=>'Add New Skill',
+            'edit_item'=>'Edit Skill',
+            'all_items'=>'All Skills'
+        ]
+    ]);
+
+}
+
+ add_action('init','freelance_post_types');
 ?>

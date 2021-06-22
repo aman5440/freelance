@@ -28,8 +28,8 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo">
-							<a href="index.html" class="standard-logo font-secondary ls3" style="line-height: 90px;">canvas</a>
-							<a href="index.html" class="retina-logo font-secondary ls3" style="line-height: 90px;">canvas</a>
+							<a href="index.html" class="standard-logo font-secondary ls3" style="line-height: 90px;">Portfolio</a>
+							<a href="index.html" class="retina-logo font-secondary ls3" style="line-height: 90px;">Portfolio</a>
 						</div><!-- #logo end -->
 
 						<div id="primary-menu-trigger">
@@ -40,7 +40,7 @@
 						============================================= -->
 
 						<nav class="primary-menu">
-							<?php wp_nav_menu(['theme_location'=>'headerMenuLocation']); ?>
+							<!-- <?php wp_nav_menu(['theme_location'=>'headerMenuLocation']); ?> -->
 							<ul class="menu-container one-page-menu custom-spacing" data-easing="easeInOutExpo" data-speed="1250" data-offset="0">
 								<li class="menu-item current"><a class="menu-link" href="#" data-href="#wrapper"><i class="icon-line2-home"></i><div>Intro</div></a></li>
 								<li class="menu-item"><a class="menu-link" href="#" data-href="#section-skills"><i class="icon-line2-star"></i><div>Skills</div></a></li>
