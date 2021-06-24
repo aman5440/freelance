@@ -64,7 +64,7 @@ class UserDetailsPlugin
         foreach($this->fields as $filed)
         {
             
-            add_settings_field($filed['field_id'], $filed['title'], call_user_func([$this, $filed['render']],$filed['field_id']), $this->page, $this->section);
+            add_settings_field($filed['field_id'], $filed['title'], [$this, $filed['render']], $this->page, $this->section);
 
             register_setting('userdetailplugin', $filed['field_id'], ['sanitize_callback'=>'sanitize_text_field', 'default'=>'']);
         }
